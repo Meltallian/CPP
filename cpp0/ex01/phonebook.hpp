@@ -35,13 +35,13 @@ class PhoneBook
 	}
 	void	display()
 	{
-		std::cout << "  index   |first name|last name | nickname " << std::endl;
+		std::cout << "index     |first name|last name |nickname  " << std::endl;
 		for (size_t i = 0; i < currentContactCount; i++)
 		{
 			std::cout << std::setw(10) << std::left << i 
-				<< "|" << contacts[i].firstName 
-				<< "|" << contacts[i].lastName
-				<< "|" << contacts[i].nickName 
+				<< "|" << std::setw(10) << std::left << contacts[i].firstName 
+				<< "|" << std::setw(10) << std::left << contacts[i].lastName
+				<< "|" << std::setw(10) << std::left << contacts[i].nickName 
 				<< std::endl;
 		}
 	}

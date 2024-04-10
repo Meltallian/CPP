@@ -2,16 +2,16 @@
 CXX=c++
 
 # Compiler flags
-CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g 
 
 # Linker flags
-LDFLAGS=-fsanitize=address
+LDFLAGS= #-fsanitize=address
 
 # Target executable
 TARGET= phonebook
 
 # Source files
-SOURCES= phonebook.cpp main.cpp
+SOURCES= main.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

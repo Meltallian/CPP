@@ -2,7 +2,7 @@
 CXX=c++
 
 # Compiler flags
-CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g #-fsanitize=address
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g 
 
 # Linker flags
 LDFLAGS=-fsanitize=address

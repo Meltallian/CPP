@@ -11,7 +11,7 @@ LDFLAGS= #-fsanitize=address
 TARGET= phonebook
 
 # Source files
-SOURCES= Phonebook.cpp
+SOURCES= Account.cpp tests.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

@@ -6,7 +6,11 @@
 
 Account::Account(int initial_deposit)
 {
-
+	_accountIndex = _nbAccounts;
+	_nbAccounts++;
+	_amount = initial_deposit;
+	_nbDeposits = 0;
+	_nbWithdrawals = 0;
 }
 
 void	Account::displayAccountsInfos( void )
@@ -61,7 +65,7 @@ int		Account::checkAmount( void ) const
 
 void	Account::displayStatus( void ) const
 {
-	
+
 }
 
 void	Account::_displayTimestamp( void )

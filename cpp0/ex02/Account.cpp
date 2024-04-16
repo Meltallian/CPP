@@ -4,7 +4,67 @@
 #include <cctype>
 #include <iomanip>
 
-void	makeDeposit( int deposit );
-bool	makeWithdrawal( int withdrawal );
-int		checkAmount( void ) const;
-void	displayStatus( void ) const;
+Account::Account(int initial_deposit)
+{
+
+}
+
+void	Account::displayAccountsInfos( void )
+{
+
+}
+
+int	Account::getNbAccounts( void )
+{
+	return (Account::_nbAccounts);
+}
+
+int	Account::getTotalAmount ( void )
+{
+	return (Account::_totalAmount);
+}
+
+int	Account::getNbDeposits( void )
+{
+	return(Account::_totalNbDeposits);
+}
+
+int	Account::getNbWithdrawals( void )
+{
+	return(Account::_totalNbWithdrawals);
+}
+
+void	Account::makeDeposit( int deposit )
+{
+	_amount += deposit;
+	_nbDeposits++;
+	Account::_totalNbDeposits++;
+}
+
+bool	Account::makeWithdrawal( int withdrawal )
+{
+	if (_amount - withdrawal < 0)
+		return (false);
+	else 
+	{
+		_amount -= withdrawal;
+		_nbWithdrawals++;
+		Account::_totalNbWithdrawals++;
+		return (true);
+	}
+}
+
+int		Account::checkAmount( void ) const
+{
+	return (_amount);
+}
+
+void	Account::displayStatus( void ) const
+{
+	
+}
+
+void	Account::_displayTimestamp( void )
+{
+
+}

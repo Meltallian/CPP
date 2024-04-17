@@ -8,7 +8,7 @@ CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= phonebook
+TARGET= account
 
 # Source files
 SOURCES= Account.cpp tests.cpp

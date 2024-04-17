@@ -11,7 +11,7 @@ LDFLAGS=-fsanitize=address
 TARGET= megaphone
 
 # Source files
-SOURCES= megaphone.cpp
+SOURCES= Megaphone.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

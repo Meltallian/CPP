@@ -8,7 +8,7 @@ CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= brain
+TARGET= horde
 
 # Source files
 SOURCES= main.cpp Zombie.cpp ZombieHorde.cpp

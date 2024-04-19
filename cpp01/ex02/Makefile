@@ -8,10 +8,10 @@ CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= account
+TARGET= brain
 
 # Source files
-SOURCES= Account.cpp tests.cpp
+SOURCES= main.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

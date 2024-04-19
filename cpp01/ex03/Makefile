@@ -8,10 +8,10 @@ CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= account
+TARGET= violence
 
 # Source files
-SOURCES= Account.cpp tests.cpp
+SOURCES= main.cpp Weapon.cpp HumanB.cpp HumanA.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

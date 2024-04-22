@@ -18,10 +18,8 @@ class HumanB
 	void	setName(std::string	name);
 	std::string	getName();
 
+	void	attack();
 	void	setWeapon(Weapon &weapon);
 
 	// Weapon	getWeapon();
-
-	void	attack();
-
 };

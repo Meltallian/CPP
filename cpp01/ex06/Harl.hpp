@@ -8,7 +8,8 @@ enum	Command
 	DEBUG,
 	INFO,
 	WARNING,
-	ERROR
+	ERROR,
+	ELSE
 };
 
 class Harl
@@ -19,6 +20,7 @@ class Harl
 	void	info(void);
 	void	warning(void);
 	void	error(void);
+	void	_else(void);
 
 	public:
 

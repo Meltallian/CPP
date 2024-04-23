@@ -38,8 +38,8 @@ void	Harl::complain(std::string level)
 	if (i <= 3) 
 	{
 		++i;
-		if (level == tab[i].level) //(this->*lut[i].f)() calls the member function pointed to by lut[i].f on the object pointed to by this.
-			(this->*tab[i].f)();
+		if (level == tab[i].level)//(this->*lut[i].f)() calls the member function pointed
+			(this->*tab[i].f)(); // to by lut[i].f on the object pointed to by this.
 		else
 			complain(level);
 	}

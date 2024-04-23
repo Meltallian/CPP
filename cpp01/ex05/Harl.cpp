@@ -12,6 +12,21 @@ Harl::Harl()
 	tab[3].f = &Harl::error;
 }
 
+Harl::~Harl(){};
+
+void	Harl::complain(std::string level)
+{
+	int	i = 0;
+	while (i < 4)
+	{
+		if (tab[i].level == level)
+		{
+			(this->*tab[i].f)();
+		}
+		i++;
+	}
+}
+
 void	Harl::debug(void)
 {
 	std::cout << "[DEBUG] I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
@@ -30,18 +45,4 @@ void	Harl::warning(void)
 void	Harl::error(void)
 {
 	std::cout << "[ERROR] This is unacceptable! I want to speak to the manager now." << std::endl;
-}
-
-void	Harl::complain(std::string level)
-{
-	static int	i = -1;
-	if (i <= 3) 
-	{
-		++i;
-		if (level == tab[i].level)//(this->*lut[i].f)() calls the member function pointed
-			(this->*tab[i].f)(); // to by lut[i].f on the object pointed to by this.
-		else
-			complain(level);
-	}
-	i = -1;
 }

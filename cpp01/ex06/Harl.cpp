@@ -43,7 +43,7 @@ void	Harl::complain(std::string level)
 	Command cmd = getCommand(level);
 	switch (cmd)
 	{
-		case ELSE:
+		default:
 			_else();
 			break;
 		case DEBUG:

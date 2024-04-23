@@ -4,9 +4,8 @@ int	main(void)
 {
 	size_t	num = 10;
 	std::string	name = "Johnny Cash";
-	Zombie Zoom;
 
-	Zombie *horde = Zoom.zombieHorde(num, name);
+	Zombie *horde = zombieHorde(num, name);
 
 	for(size_t i = 0; i < num; i++)
 	{

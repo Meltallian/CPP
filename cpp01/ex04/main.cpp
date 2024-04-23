@@ -53,7 +53,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		if(!av[2][0] || !av[3][0])
+		if(!av[2][0])
 			std::cout << "Trying to trick me bruh" << std::endl;
 		else
 			looser(av[1], av[2], av[3]);

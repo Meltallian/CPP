@@ -119,33 +119,50 @@ bool	Fixed::operator!=(const Fixed &other)
 		return false;
 }
 
-int	Fixed::operator+(const Fixed &other)
+float	Fixed::operator+(const Fixed &other)
 {
-	return this->_fixedPointNbValue + other.getRawBits();
+	return this->toFloat() + other.toFloat();
 }
 
-int	Fixed::operator-(const Fixed &other)
+float	Fixed::operator-(const Fixed &other)
 {
-	return this->_fixedPointNbValue - other.getRawBits();
+	return this->toFloat() - other.toFloat();
 }
 
-int	Fixed::operator*(const Fixed &other)
+float	Fixed::operator*(const Fixed &other)
 {
-// Intermediate result might need to be handled with a larger type if overflow is a concern	
-	int	result = (_fixedPointNbValue * other.getRawBits()) >> _nbFractionalbits;
-// Right shift to adjust the scale
-    return result;
+	return this->toFloat() * other.toFloat();
 }
 
-int	Fixed::operator/(const Fixed &other)
+float	Fixed::operator/(const Fixed &other)
 {
-	if (other.getRawBits() == 0)
-	{
-		std::cout << "Error: division by zero. Result will be wrong." << std::endl;
-		return (0);
-	}
-	int	result = (this->_fixedPointNbValue << _nbFractionalbits) / other.getRawBits();
-	return (result);
+	return this->toFloat() / other.toFloat();
+}
+
+Fixed	&Fixed::operator++()
+{
+	this->_fixedPointNbValue++;
+	return (*this);
+}
+
+Fixed	&Fixed::operator--()
+{
+	this->_fixedPointNbValue--;
+	return *this;
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	++this->_fixedPointNbValue;
+	return (tmp);
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+	--this->_fixedPointNbValue;
+	return (tmp);
 }
 
 int	Fixed::getRawBits(void) const

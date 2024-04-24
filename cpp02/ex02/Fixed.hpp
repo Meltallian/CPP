@@ -28,10 +28,16 @@ class Fixed
 	bool	operator==(const Fixed &other);
 	bool	operator!=(const Fixed &other);
 
-	int		operator+(const Fixed &other);
-	int		operator-(const Fixed &other);	
-	int		operator*(const Fixed &other);
-	int		operator/(const Fixed &other);
+	float	operator+(const Fixed &other);
+	float	operator-(const Fixed &other);	
+	float	operator*(const Fixed &other);
+	float	operator/(const Fixed &other);
+
+	Fixed	&operator++(); //pre-incr
+	Fixed	&operator--();
+	Fixed	operator++(int); //post-incr
+	Fixed	operator--(int);
+
 
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);

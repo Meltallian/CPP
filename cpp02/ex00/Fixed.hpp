@@ -9,6 +9,7 @@ class Fixed
 
 	int					_fixedPointNbValue;
 	static const int	_nbFractionalbits = 8;
+	
 
 	public:
 

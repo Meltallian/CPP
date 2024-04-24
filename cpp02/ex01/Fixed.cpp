@@ -16,7 +16,9 @@ Fixed::Fixed(const float number)
 	std::cout << "Float constructor called" << std::endl;
 	//1 << _nbFractionalbits equivaut à 256. (1*2^8)
 	//static_cast<int> instead of (int) is safer, clearer, overall best practice
-	setRawBits(static_cast<int>(number * (1 << _nbFractionalbits)));
+	//needs to be rounded to the nearest integer before it can be stored
+	// in a fixed-point format -> use of std::roundf
+	setRawBits(static_cast<int>(std::roundf(number * (1 << _nbFractionalbits))));
 }
 
 Fixed::~Fixed() 
@@ -55,7 +57,7 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return static_cast<float>(_fixedPointNbValue) / (1 << _nbFractionalbits);
+	return static_cast<float>(std::roundf(_fixedPointNbValue) / (1 << _nbFractionalbits));
 }
 
 int	Fixed::toInt(void) const

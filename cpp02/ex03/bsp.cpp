@@ -1,5 +1,6 @@
 #include "Point.hpp"
 
+//https://stackoverflow.com/questions/2049582/how-to-determine-if-a-point-is-in-a-2d-triangle
 float	sign(Point const &a, Point const &b, Point const &c)
 {
 	float first = a.getX().toFloat() - c.getX().toFloat();

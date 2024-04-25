@@ -2,18 +2,18 @@
 
 Fixed::Fixed() : _fixedPointNbValue(0) 
 {
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 };
 
 Fixed::Fixed(const int integer)
 {
-	std::cout << "Int constructor called" << std::endl;
+	// std::cout << "Int constructor called" << std::endl;
 	setRawBits(integer << _nbFractionalbits);
 };
 
 Fixed::Fixed(const float number)
 {
-	std::cout << "Float constructor called" << std::endl;
+	// std::cout << "Float constructor called" << std::endl;
 	//1 << _nbFractionalbits equivaut à 256. (1*2^8)
 	//static_cast<int> instead of (int) is safer, clearer, overall best practice
 	setRawBits(static_cast<int>(std::roundf(number * (1 << _nbFractionalbits))));
@@ -21,12 +21,12 @@ Fixed::Fixed(const float number)
 
 Fixed::~Fixed() 
 {
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 };
 
 Fixed::Fixed(const Fixed &other)
 {
-	std::cout << "Copy Constructor called" << std::endl;
+	// std::cout << "Copy Constructor called" << std::endl;
 	*this = other;
 	//  _fixedPointNbValue = other.getRawBits();
 }
@@ -37,7 +37,7 @@ Fixed	&Fixed::operator=(const Fixed &other)
 	{
 		_fixedPointNbValue = other.getRawBits();
 	}
-	std::cout << "Copy assignment operator called" << std::endl;
+	// std::cout << "Copy assignment operator called" << std::endl;
 	return *this;
 }
 
@@ -154,14 +154,14 @@ Fixed	&Fixed::operator--()
 Fixed	Fixed::operator++(int)
 {
 	Fixed tmp(*this);
-	++this->_fixedPointNbValue;
+	this->_fixedPointNbValue++;
 	return (tmp);
 }
 
 Fixed	Fixed::operator--(int)
 {
 	Fixed tmp(*this);
-	--this->_fixedPointNbValue;
+	this->_fixedPointNbValue--;
 	return (tmp);
 }
 
@@ -191,4 +191,36 @@ std::ostream &operator<<(std::ostream &out, const Fixed &f)
 {
 	out << f.toFloat();
 	return out;
+}
+
+Fixed	&Fixed::min(Fixed &first, Fixed &second)
+{
+	if (first.getRawBits() < second.getRawBits())
+		return (first);
+	else
+		return (second);
+}
+
+Fixed	&Fixed::max(Fixed &first, Fixed &second)
+{
+	if (first.getRawBits() > second.getRawBits())
+		return (first);
+	else
+		return (second);	
+}
+
+const Fixed	&Fixed::min(const Fixed	&first, const Fixed &second)
+{
+	if (first.getRawBits() < second.getRawBits())
+		return (first);
+	else
+		return (second);	
+}
+
+const Fixed	&Fixed::max(const Fixed	&first, const Fixed &second)
+{
+	if (first.getRawBits() > second.getRawBits())
+		return (first);
+	else
+		return (second);	
 }

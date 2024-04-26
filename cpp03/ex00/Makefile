@@ -8,10 +8,10 @@ CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= point
+TARGET= clap
 
 # Source files
-SOURCES= main.cpp Fixed.cpp Point.cpp bsp.cpp
+SOURCES= main.cpp ClapTrap.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

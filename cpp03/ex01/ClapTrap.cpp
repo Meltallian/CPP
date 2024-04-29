@@ -48,6 +48,26 @@ int	ClapTrap::getAD() const
 	return _attackDamage;
 }
 
+void	ClapTrap::setName(std::string name)
+{
+	_name = name;
+}
+
+void	ClapTrap::setHP(unsigned int hitPoints)
+{
+	_hitPoints = hitPoints;
+}
+
+void	ClapTrap::setEP(unsigned int energyPoints)
+{
+	_energyPoints = energyPoints;
+}
+
+void	ClapTrap::setAD(unsigned int attackDamage)
+{
+	_attackDamage = attackDamage;
+}
+
 void	ClapTrap::attack(const std::string &target)
 {
 	if (_energyPoints <= 0)

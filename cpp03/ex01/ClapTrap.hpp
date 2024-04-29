@@ -23,9 +23,14 @@ class ClapTrap
 	int			getHP() const;
 	int			getEP() const;
 	int			getAD() const;
+	void	setName(std::string name);
+	void	setHP(unsigned int hitPoints);
+	void	setEP(unsigned int energyPoints);
+	void	setAD(unsigned int attackDamage);
 
 	void	attack(const std::string &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+
 
 };

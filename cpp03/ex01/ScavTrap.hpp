@@ -18,4 +18,8 @@ class ScavTrap : public ClapTrap
 	void	guardGate();
 	bool	getGuardMode();
 	void	setGuardMode(bool activate);
+
+	void	attack(const std::string &target);
+	void	takeDamage(unsigned int amount);
+	void	beRepaired(unsigned int amount);
 };

@@ -2,8 +2,8 @@
 
 int	main()
 {
-	ScavTrap a("Paul");
-	ClapTrap b("swag");
-	a.guardGate();
+	ScavTrap Socrate("Socrate");
+	Socrate.attack("Jackie");
+	Socrate.guardGate();
 	return 0;
 }

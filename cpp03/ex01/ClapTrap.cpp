@@ -33,17 +33,17 @@ std::string	ClapTrap::getName() const
 	return _name;
 }
 
-int	ClapTrap::getHP() const
+unsigned int	ClapTrap::getHP() const
 {
 	return _hitPoints;
 }
 
-int	ClapTrap::getEP() const
+unsigned int	ClapTrap::getEP() const
 {
 	return _energyPoints;
 }
 
-int	ClapTrap::getAD() const
+unsigned int	ClapTrap::getAD() const
 {
 	return _attackDamage;
 }

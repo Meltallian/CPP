@@ -20,17 +20,21 @@ class ClapTrap
 	ClapTrap(const ClapTrap &other);
 
 	std::string getName() const;
-	int			getHP() const;
-	int			getEP() const;
-	int			getAD() const;
+	unsigned int			getHP() const;
+	unsigned int			getEP() const;
+	unsigned int			getAD() const;
 	void	setName(std::string name);
 	void	setHP(unsigned int hitPoints);
 	void	setEP(unsigned int energyPoints);
 	void	setAD(unsigned int attackDamage);
 
-	void	attack(const std::string &target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	virtual void	attack(const std::string &target);
+	// Virtual Functions: Declaring the function as virtual in the base class
+	// is essential for polymorphism. This setup allows the most
+	// derived class's function to be called, even when the
+	// function call goes through a base class pointer or reference.
+	virtual void	takeDamage(unsigned int amount);
+	virtual void	beRepaired(unsigned int amount);
 
 
 };

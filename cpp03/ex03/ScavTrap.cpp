@@ -59,28 +59,28 @@ void	ScavTrap::attack(const std::string &target)
 	}
 }
 
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "[ScavTrap] " << getName() 
-		<< " got damaged for " << amount << std::endl;
-	if (amount > getHP())
-		setHP(0);
-	else
-	{
-		setHP(getHP() - amount);
-	}
-}
+// void	ScavTrap::takeDamage(unsigned int amount)
+// {
+// 	std::cout << "[ScavTrap] " << getName() 
+// 		<< " got damaged for " << amount << std::endl;
+// 	if (amount > getHP())
+// 		setHP(0);
+// 	else
+// 	{
+// 		setHP(getHP() - amount);
+// 	}
+// }
 
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	if (getEP() <= 0)
-		std::cout << "[ScavTrap] " << getName() 
-			<< " is out of energy and can't repair!" << std::endl;
-	else 
-	{
-		setEP(getEP() - 1);
-		std::cout << "[ScavTrap] " << getName() 
-			<< " gets healed by " << amount << std::endl;
-		setHP(getHP() + amount);
-	}
-}
+// void	ScavTrap::beRepaired(unsigned int amount)
+// {
+// 	if (getEP() <= 0)
+// 		std::cout << "[ScavTrap] " << getName() 
+// 			<< " is out of energy and can't repair!" << std::endl;
+// 	else 
+// 	{
+// 		setEP(getEP() - 1);
+// 		std::cout << "[ScavTrap] " << getName() 
+// 			<< " gets healed by " << amount << std::endl;
+// 		setHP(getHP() + amount);
+// 	}
+// }

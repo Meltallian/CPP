@@ -48,28 +48,28 @@ void	FragTrap::attack(const std::string &target)
 	}
 }
 
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "[FragTrap] " << getName() 
-		<< " got damaged for " << amount << std::endl;
-	if (amount > getHP())
-		setHP(0);
-	else
-	{
-		setHP(getHP() - amount);
-	}
-}
+// void	FragTrap::takeDamage(unsigned int amount)
+// {
+// 	std::cout << "[FragTrap] " << getName() 
+// 		<< " got damaged for " << amount << std::endl;
+// 	if (amount > getHP())
+// 		setHP(0);
+// 	else
+// 	{
+// 		setHP(getHP() - amount);
+// 	}
+// }
 
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if (getEP() <= 0)
-		std::cout << "[FragTrap] " << getName() 
-			<< " is out of energy and can't repair!" << std::endl;
-	else 
-	{
-		setEP(getEP() - 1);
-		std::cout << "[FragTrap] " << getName() 
-			<< " gets healed by " << amount << std::endl;
-		setHP(getHP() + amount);
-	}
-}
+// void	FragTrap::beRepaired(unsigned int amount)
+// {
+// 	if (getEP() <= 0)
+// 		std::cout << "[FragTrap] " << getName() 
+// 			<< " is out of energy and can't repair!" << std::endl;
+// 	else 
+// 	{
+// 		setEP(getEP() - 1);
+// 		std::cout << "[FragTrap] " << getName() 
+// 			<< " gets healed by " << amount << std::endl;
+// 		setHP(getHP() + amount);
+// 	}
+// }

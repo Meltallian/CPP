@@ -24,6 +24,6 @@ class ScavTrap : virtual public ClapTrap
 	void	setGuardMode(bool activate);
 
 	void	attack(const std::string &target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+	// void	takeDamage(unsigned int amount);
+	// void	beRepaired(unsigned int amount);
 };

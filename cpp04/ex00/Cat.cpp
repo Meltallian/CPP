@@ -25,7 +25,7 @@ Cat::Cat(const Cat &other) : Animal()
 	*this = other;
 }
 
-void	Cat::makeSound()
+void	Cat::makeSound() const
 {
-	std::cout << "I hate everyone, just give me food already." << std::endl;
+	std::cout << "[Cat] \"I hate everyone, just give me food already.\"" << std::endl;
 }

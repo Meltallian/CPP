@@ -25,7 +25,7 @@ Dog::Dog(const Dog &other) : Animal()
 	*this = other;
 }
 
-void	Dog::makeSound()
+void	Dog::makeSound() const
 {
-	std::cout << "I love everyone, how can I make your life happier ?" << std::endl;
+	std::cout << "[Dog] \"I love everyone, how can I improve your life ?\"" << std::endl;
 }

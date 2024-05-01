@@ -25,7 +25,7 @@ Animal::Animal(const Animal &other)
 	*this = other;
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
 	std::cout << "[Animal] *the sound of Silence*" << std::endl;
 }
@@ -35,7 +35,7 @@ void	Animal::setType(std::string type)
 	_type = type;
 }
 
-std::string	Animal::getType()
+std::string	Animal::getType() const
 {
 	return _type;
 }

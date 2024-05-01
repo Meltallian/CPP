@@ -3,8 +3,8 @@
 #include <iostream>
 #include <string>
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+// #include "Dog.hpp"
+// #include "Cat.hpp"
 
 class Animal
 {
@@ -18,13 +18,13 @@ class Animal
 	public:
 
 	Animal();
-	~Animal();
+	virtual ~Animal();
 	Animal &operator=(const Animal &other);
 	Animal(const Animal &other);
 
 	void	setType(std::string type);
-	std::string	getType();
+	std::string	getType() const;
 	
-	virtual void	makeSound();
+	virtual void	makeSound() const;
 
 };

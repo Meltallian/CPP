@@ -6,7 +6,7 @@
 // #include "Dog.hpp"
 // #include "Cat.hpp"
 
-class WrongAnimal
+class Animal
 {
 	private:
 
@@ -17,14 +17,14 @@ class WrongAnimal
 
 	public:
 
-	WrongAnimal();
-	~WrongAnimal();
-	WrongAnimal &operator=(const WrongAnimal &other);
-	WrongAnimal(const WrongAnimal &other);
+	Animal();
+	virtual ~Animal();
+	Animal &operator=(const Animal &other);
+	Animal(const Animal &other);
 
 	void	setType(std::string type);
 	std::string	getType() const;
 	
-	void	makeSound() const;
+	virtual void	makeSound() const;
 
 };

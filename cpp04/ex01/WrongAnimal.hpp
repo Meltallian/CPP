@@ -3,8 +3,7 @@
 #include <iostream>
 #include <string>
 
-// #include "Dog.hpp"
-// #include "Cat.hpp"
+// #include "WrongCat.hpp"
 
 class WrongAnimal
 {
@@ -18,13 +17,13 @@ class WrongAnimal
 	public:
 
 	WrongAnimal();
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 	WrongAnimal &operator=(const WrongAnimal &other);
 	WrongAnimal(const WrongAnimal &other);
 
 	void	setType(std::string type);
 	std::string	getType() const;
 	
-	void	makeSound() const;
+	virtual void	makeSound() const;
 
 };

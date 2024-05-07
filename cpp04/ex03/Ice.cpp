@@ -2,12 +2,12 @@
 
 Ice::Ice() : AMateria("ice")
 {
-	std::cout << "[Ice] was constructed." << std::endl;
+	// std::cout << "[Ice] was constructed." << std::endl;
 }
 
 Ice::~Ice()
 {
-	std::cout << "[Ice] was destroyed." << std::endl;
+	// std::cout << "[Ice] was destroyed." << std::endl;
 }
 
 Ice &Ice::operator=(const Ice &other)

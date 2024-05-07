@@ -2,12 +2,12 @@
 
 AMateria::AMateria(std::string const &type) : _type(type)
 {
-	std::cout << "[AMateria] was constructed." << std::endl;
+	// std::cout << "[AMateria] was constructed." << std::endl;
 }
 
 AMateria::~AMateria()
 {
-	std::cout << "[AMateria] was destroyed." << std::endl;
+	// std::cout << "[AMateria] was destroyed." << std::endl;
 }
 
 AMateria &AMateria::operator=(const AMateria &other)

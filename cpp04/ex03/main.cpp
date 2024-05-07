@@ -20,6 +20,16 @@ int main()
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
+	
+	// me->use(2, *bob);
+
+	// AMateria *m = new Ice();
+	// AMateria *clown = m->clone();
+	// bob->equip(clown);
+	// bob->use(0, *me);
+
+	// delete m;
+
 	delete bob;
 	delete me;
 	delete src;

@@ -2,12 +2,12 @@
 
 Cure::Cure() : AMateria("cure")
 {
-	std::cout << "[Cure] was constructed." << std::endl;
+	// std::cout << "[Cure] was constructed." << std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "[Cure] was destroyed." << std::endl;
+	// std::cout << "[Cure] was destroyed." << std::endl;
 }
 
 Cure &Cure::operator=(const Cure &other)

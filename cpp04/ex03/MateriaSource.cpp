@@ -6,7 +6,7 @@ MateriaSource::MateriaSource()
 	{
 		_materia[i] = NULL;
 	}
-	std::cout << "[MateriaSource] was constructed." << std::endl;
+	// std::cout << "[MateriaSource] was constructed." << std::endl;
 }
 
 MateriaSource::~MateriaSource()
@@ -16,7 +16,7 @@ MateriaSource::~MateriaSource()
 		if (_materia[i])
 			delete _materia[i];
 	}	
-	std::cout << "[MateriaSource] was destroyed." << std::endl;
+	// std::cout << "[MateriaSource] was destroyed." << std::endl;
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &other)
@@ -46,7 +46,7 @@ MateriaSource::MateriaSource(const MateriaSource &other)
 		if (other._materia[i] && other._materia[i]->getType() == "ice")
 			_materia[i] = new Ice();
 	}		
-	std::cout << "[MateriaSource] was constructed." << std::endl;	
+	// std::cout << "[MateriaSource] was constructed." << std::endl;	
 }
 
 void MateriaSource::learnMateria(AMateria *m)

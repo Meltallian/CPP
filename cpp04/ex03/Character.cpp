@@ -6,7 +6,7 @@ Character::Character(std::string name) : ICharacter(), _name(name)
 	{
 		_materia[i] = NULL;
 	}
-	std::cout << "[Character] " << _name << " was constructed." << std::endl;
+	// std::cout << "[Character] " << _name << " was constructed." << std::endl;
 }
 
 Character::~Character()
@@ -16,7 +16,7 @@ Character::~Character()
 		if (_materia[i])
 			delete _materia[i];
 	}	
-	std::cout << "[Character] " << _name << " was destroyed." << std::endl;
+	// std::cout << "[Character] " << _name << " was destroyed." << std::endl;
 }
 
 Character &Character::operator=(const Character &other)
@@ -48,7 +48,7 @@ Character::Character(const Character &other) : ICharacter()
 		if (other._materia[i] && other._materia[i]->getType() == "ice")
 			_materia[i] = new Ice();
 	}		
-	std::cout << "[Character] " << _name << " was constructed." << std::endl;	
+	// std::cout << "[Character] " << _name << " was constructed." << std::endl;	
 }
 
 std::string const &Character::getName() const

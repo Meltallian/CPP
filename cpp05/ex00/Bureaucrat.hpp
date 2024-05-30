@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 
+#define	HIGHEST 1
+#define	LOWEST 150
+
 class Bureaucrat
 {
 	private:
@@ -13,7 +16,7 @@ class Bureaucrat
 	Bureaucrat(std::string name, int grade);
 	~Bureaucrat();
 	Bureaucrat	&operator=(const Bureaucrat &other);
-	Bureaucrat(const Bureaucrat &other);
+	Bureaucrat(Bureaucrat const &other);
 	
 	int	getGrade() const;
 	std::string	getName() const;

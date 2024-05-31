@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <exception>
 
 #define	HIGHEST 1
 #define	LOWEST 150
@@ -36,4 +37,4 @@ class Bureaucrat
 	};
 };
 
-std::ostream &operator<<(std::ostream &out, Bureaucrat &f);
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &f);

@@ -1,4 +1,4 @@
-class Bureaucrat;
+
 #pragma once
 
 #include <iostream>
@@ -8,6 +8,7 @@ class Bureaucrat;
 #define	HIGHEST 1
 #define	LOWEST 150
 
+class Bureaucrat;
 
 class Form
 {
@@ -43,4 +44,4 @@ class Form
 	
 };
 
-std::ostream &operator<<(std::ostream &out, Form &f);
+std::ostream &operator<<(std::ostream &out, const Form &form);

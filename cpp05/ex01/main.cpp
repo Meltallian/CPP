@@ -10,14 +10,15 @@ void handleException(const std::exception &ex)
 //calling signform just states whether form was signed or not
 int	main(void)
 {
-	int	test = 150;
+	int	test = 80;
     try 
 	{
 	    Bureaucrat a("John", test);
 		Form form("Women's rights", 100, 100);
-   		std::cout << a << std::endl;
+   		// std::cout << a << std::endl;
 		form.beSigned(a);
 		a.signForm(form);
+		// std::cout << form << std::endl;
     } 
 	catch (Bureaucrat::GradeTooLowException &ex)
 	{

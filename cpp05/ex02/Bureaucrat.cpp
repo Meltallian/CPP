@@ -62,6 +62,11 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
     return "TooLowException";
 }
 
+const char *Bureaucrat::NotSigned::what() const throw()
+{
+	return "UnsignedForm";
+}
+
 void	Bureaucrat::signForm(AForm &f)
 {
 	if (f.getSigned())
@@ -69,6 +74,21 @@ void	Bureaucrat::signForm(AForm &f)
 	else
 		std::cout << _name << " couldn't sign " << f.getName() 
 			<< " because he's just plain stoupid." << std::endl;
+}
+
+void	Bureaucrat::executeForm(AForm const &form)
+{
+	if (form.getSigned())
+	{
+		if (_grade <= form.getReqGradeToExecute())
+		{
+			std::cout << _name << " executed " << form.getName() << "." << std::endl;
+		}
+		else
+			throw Bureaucrat::GradeTooLowException();
+	}
+	else
+		throw Bureaucrat::NotSigned();
 }
 
 std::ostream &operator<<(std::ostream & o, const Bureaucrat &f) 

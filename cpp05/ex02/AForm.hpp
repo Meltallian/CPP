@@ -20,7 +20,7 @@ class AForm
 
 	public:
 
-	AForm();
+	AForm(std::string name, const int sign, const int execute);
 	virtual ~AForm() = 0;
 	// Form &operator=(const Form &other);
 	// Form(const Form &other);
@@ -33,6 +33,10 @@ class AForm
 		public:
 			const char *what() const throw();
 	};
+	class NotSigned : public std::exception {
+		public:
+			const char *what() const throw();		
+	};
 
 	std::string	getName() const;
 	bool		getSigned() const;
@@ -44,4 +48,4 @@ class AForm
 	virtual void	execute(Bureaucrat const &executor) const = 0;
 };
 
-std::ostream &operator<<(std::ostream &out, AForm &f);
+std::ostream &operator<<(std::ostream &out, const AForm &f);

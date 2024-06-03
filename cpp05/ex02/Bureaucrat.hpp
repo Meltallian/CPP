@@ -38,8 +38,13 @@ class Bureaucrat
 		public:
 			const char *what() const throw();
 	};
+	class NotSigned : public std::exception {
+		public:
+			const char *what() const throw();		
+	};
 
 	void	signForm(AForm &f);
+	void	executeForm(AForm const & form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &f);

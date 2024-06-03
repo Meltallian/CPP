@@ -11,7 +11,9 @@ LDFLAGS= #-fsanitize=address
 TARGET= buro
 
 # Source files
-SOURCES= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp
+SOURCES= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

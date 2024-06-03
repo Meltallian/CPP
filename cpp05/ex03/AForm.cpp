@@ -1,5 +1,10 @@
 #include "AForm.hpp"
 
+AForm::AForm(std::string name) : _name(name), _signed(false),
+	_reqGradeToSign(1), _reqGradeToExecute(1)
+{
+}
+
 AForm::AForm(std::string name, const int sign, const int execute) : 
 _name(name), _signed(false), _reqGradeToSign(sign), _reqGradeToExecute(execute)
 {

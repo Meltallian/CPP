@@ -23,8 +23,8 @@ class Form
 
 	Form(std::string name, const int reqGradeToSign, const int reGradeToExecute);
 	~Form();
-	// Form &operator=(const Form &other);
-	// Form(const Form &other);
+	Form &operator=(const Form &other);
+	Form(const Form &other);
 
 	class GradeTooHighException : public std::exception {
 		public:

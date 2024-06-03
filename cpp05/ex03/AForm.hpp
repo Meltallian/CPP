@@ -20,6 +20,7 @@ class AForm
 
 	public:
 
+	AForm(std::string name);
 	AForm(std::string name, const int sign, const int execute);
 	virtual ~AForm() = 0;
 	AForm &operator=(const AForm &other);

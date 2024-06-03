@@ -16,11 +16,19 @@ Form::Form(std::string name, const int reqGradeToSign, const int reqGradeToExecu
 Form::~Form()
 {}
 
-//Privates attributes are const. There's no use in copying it.
-// Form &Form::operator=(const Form &other){}
+Form &Form::operator=(const Form &other)
+{
+	if (this != &other)
+	{
+		_signed = other._signed;
+	}
+	return *this;
+}
 
-//same logic
-//Form::Form(const Form &other){}
+Form::Form(const Form &other) : _name(other._name), _signed(other._signed),
+	_reqGradeToSign(other._reqGradeToSign), _reqGradeToExecute(other._reqGradeToExecute)
+{
+}
 
 const char *Form::GradeTooHighException::what() const throw()
 {

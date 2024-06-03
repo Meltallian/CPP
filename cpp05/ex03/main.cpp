@@ -2,6 +2,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 void handleException(const std::exception &ex) 
 {
@@ -14,22 +15,17 @@ void handleException(const std::exception &ex)
 
 int	main(void)
 {
-	int	test = 2;
-    try 
+	int	grade = 2;
+
+	Intern intern;
+	AForm *rrf;
+	rrf = intern.makeForm("RobotomyRequestForm", "the evaluator");
+	try 
 	{
-	    Bureaucrat a("John", test);
-		PresidentialPardonForm p("Schlag");
-		RobotomyRequestForm	r("Douche");
-		ShrubberyCreationForm	s("schrub");
-		p.beSigned(a);
-		p.execute(a);
-		r.beSigned(a);
-		r.execute(a);
-		s.beSigned(a);
-		s.execute(a);
-   		// std::cout << a << std::endl;
-		// std::cout << s << std::endl;
-    } 
+		Bureaucrat	b("Bonobo", grade);
+		rrf->beSigned(b);
+		rrf->execute(b);
+	}
 	catch (Bureaucrat::GradeTooLowException &ex)
 	{
 		handleException(ex);
@@ -50,5 +46,6 @@ int	main(void)
 	{
 		handleException(ex);
 	}
+	delete rrf;
 	return 0;
 }

@@ -4,10 +4,9 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 	{
+		std::cerr << "No argument provided" << std::endl;
 		return 1;
 	}
-	(void)ac;
-	std::string s = av[1];
-	ScalarConverter::convert(s);
+	ScalarConverter::convert(av[1]);
 	return 0;
 }

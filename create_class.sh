@@ -17,20 +17,19 @@ echo "Creating ${hpp_file} and ${cpp_file}..."
 
 # Write to .hpp file
 cat <<EOL > ${hpp_file}
-#ifndef ${class_name}_HPP
-#define ${class_name}_HPP
+#pragma once
 
-class ${class_name} {
-private:
+class ${class_name} 
+{
+	private:
 
-public:
+	public:
     ${class_name}();
     ~${class_name}();
     ${class_name}(const ${class_name}& other);
     ${class_name}& operator=(const ${class_name}& other);
 };
 
-#endif // ${class_name}_HPP
 EOL
 
 # Write to .cpp file
@@ -49,7 +48,8 @@ ${class_name}::${class_name}(const ${class_name}& other)
 {
 }
 
-${class_name}& ${class_name}::operator=(const ${class_name}& other) {
+${class_name}& ${class_name}::operator=(const ${class_name}& other) 
+{
     if (this != &other)
 	{
 

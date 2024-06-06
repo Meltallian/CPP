@@ -158,7 +158,7 @@ void	ScalarConverter::convert(const std::string &l)
 	}
 	else
 	{
-		//the soustraction calculus is used to check whether the float posess
+		//the soustraction calculus is used to check whether the float possess
 		//a decimal or not. if it doesn't then print it
 		if (toChar != "impossible" && toFloat - static_cast<int>(toFloat) == 0)
 		{

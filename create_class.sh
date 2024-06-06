@@ -19,6 +19,10 @@ echo "Creating ${hpp_file} and ${cpp_file}..."
 cat <<EOL > ${hpp_file}
 #pragma once
 
+#include <string>
+#include <iostream>
+#include <cmath>
+
 class ${class_name} 
 {
 	private:

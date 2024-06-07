@@ -2,7 +2,8 @@
 
 #include <iostream>
 #include <string>
-#include <random>
+#include <cstdlib>  // For rand() and srand()
+#include <ctime>    // For time()
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 

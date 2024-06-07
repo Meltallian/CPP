@@ -30,11 +30,10 @@ void	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	{
 		if (executor.getGrade() <= getReqGradeToExecute())
 		{
-			std::random_device rd;
-			std::mt19937 gen(rd());
-			std::uniform_int_distribution<> dis(0, 1);
+			srand(time(NULL));
+			int random = rand() % 2;
 			std::cout << "*rrzssgrrsssszzzz!!!* " << std::endl;
-			if (dis(gen) == 1)
+			if (random == 0)
 				std::cout << _target << " has been robotomized successfully." << std::endl;
 			else
 				std::cout << "The robotomy failed, but " << _target << " survived." << std::endl;

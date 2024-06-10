@@ -5,14 +5,13 @@ CXX=c++
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 
 # Linker flags
-LDFLAGS= -fsanitize=address
+LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= mat
+TARGET= what
 
 # Source files
-SOURCES= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp ICharacter.cpp \
-		IMateriaSource.cpp MateriaSource.cpp
+SOURCES= main.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

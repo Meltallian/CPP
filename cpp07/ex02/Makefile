@@ -11,7 +11,7 @@ LDFLAGS= #-fsanitize=address
 TARGET= array
 
 # Source files
-SOURCES= main.cpp Array.tpp
+SOURCES= main.cpp
 
 # Object files
 OBJECTS=$(SOURCES:.cpp=.o)

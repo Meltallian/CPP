@@ -29,7 +29,7 @@ int main(int, char**)
     }
     try
     {
-        numbers[-2] = 0;
+        // numbers[-2] = 0;
     }
     catch(const std::exception& e)
     {
@@ -37,7 +37,7 @@ int main(int, char**)
     }
     try
     {
-        numbers[MAX_VAL] = 0;
+        // numbers[MAX_VAL] = 0;
     }
     catch(const std::exception& e)
     {
@@ -49,5 +49,11 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+
+
+	// Array<std::string> a(212);
+	// a[2] = "swaggos";
+	// std::cout << a[2] << std::endl;
+
     return 0;
 }

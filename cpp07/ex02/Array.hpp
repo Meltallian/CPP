@@ -1,6 +1,4 @@
-// #pragma once
-#ifndef ARRAY_HPP
-# define ARRAY_HPP
+ #pragma once
 
 #include <string>
 #include <iostream>
@@ -28,5 +26,3 @@ class Array
 
 	unsigned int size();
 };
-
-#endif

@@ -22,6 +22,9 @@ cat <<EOL > ${hpp_file}
 #include <string>
 #include <iostream>
 #include <cmath>
+#include <vector>
+#include <algorithm>
+#include <exception>
 
 class ${class_name} 
 {

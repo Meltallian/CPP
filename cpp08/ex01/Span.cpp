@@ -71,9 +71,7 @@ void	Span::addNumbers(std::vector<int>::iterator start, std::vector<int>::iterat
 	if (_int.size() + distance > _limit)
 		throw std::exception();
 	else
-	{
 		_int.insert(_int.end(), start, end);
-	}
 }
 
 // int		Span::longestSpan()

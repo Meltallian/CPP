@@ -6,13 +6,13 @@
 #include <vector>
 #include <algorithm>
 #include <exception>
+#include <iterator>
 
 class Span 
 {
 	private:
 	std::vector<int> _int;
 	unsigned int	_limit;
-	unsigned int	_current;
 
 	public:
     Span(unsigned int n);
@@ -23,5 +23,7 @@ class Span
 	void	addNumber(int num);
 	int		shortestSpan();
 	int		longestSpan();
+
+	void	addNumbers(std::vector<int>::iterator start, std::vector<int>::iterator end);
 };
 

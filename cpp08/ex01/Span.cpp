@@ -1,6 +1,6 @@
 #include "Span.hpp"
 
-Span::Span(unsigned int n) :  _int(), _limit(n), _current(0)
+Span::Span(unsigned int n) :  _int(), _limit(n)
 {
 }
 
@@ -24,14 +24,56 @@ Span& Span::operator=(const Span& other)
 
 void	Span::addNumber(int num)
 {
-	if (_current < _limit)
-	{
+	if (_int.size() < _limit)
 		_int.push_back(num);
-		_current++;
-	}
 	else
 		throw std::exception();
 
+}
+
+int	Span::longestSpan()
+{
+	if (_int.size() > 1)
+	{
+		int max = *std::max_element(_int.begin(), _int.end());
+		int min = *std::min_element(_int.begin(), _int.end());
+		return max - min;
+	}
+	else
+		throw std::exception();	
+}
+
+int	Span::shortestSpan()
+{
+	if (_int.size() > 1)
+	{
+   		std::vector<int> sorted_vec = _int;
+    	std::sort(sorted_vec.begin(), sorted_vec.end());
+		int min_diff = __INT_MAX__;
+		// std::vector<int>::iterator it;
+    	for (size_t i = 0; i < sorted_vec.size() - 1; i++) 
+		{
+        	int diff = sorted_vec[i + 1] - sorted_vec[i];
+        	if (diff < min_diff)
+            	min_diff = diff;
+		}
+		return min_diff;
+	}
+	else
+		throw std::exception();	
+
+}
+
+void	Span::addNumbers(std::vector<int>::iterator start, std::vector<int>::iterator end)
+{
+	//std::distance(begin, end) calculates the number of elements between two iterators, begin and end.
+	size_t	distance = std::distance(start, end);
+	if (_int.size() + distance > _limit)
+		throw std::exception();
+	else
+	{
+		_int.insert(_int.end(), start, end);
+	}
 }
 
 // int		Span::longestSpan()
@@ -53,36 +95,3 @@ void	Span::addNumber(int num)
 // 	else
 // 		throw std::exception();	
 // }
-
-int		Span::longestSpan()
-{
-	if (_current > 1 && _current < _limit)
-	{
-		int max = *std::max_element(_int.begin(), _int.end());
-		int min = *std::max_element(_int.begin(), _int.end());
-		return max - min;
-	}
-	else
-		throw std::exception();	
-}
-
-int	Span::shortestSpan()
-{
-	if (_current > 1 && _current < _limit)
-	{
-   		std::vector<int> sorted_vec = _int;
-    	std::sort(sorted_vec.begin(), sorted_vec.end());
-		int min_diff;
-		// std::vector<int>::iterator it;
-    	for (size_t i = 0; i < _current - 1; i++) 
-		{
-        	int diff = sorted_vec[i + 1] - sorted_vec[i];
-        	if (diff < min_diff)
-            	min_diff = diff;
-		}
-		return min_diff;
-	}
-	else
-		throw std::exception();	
-
-}

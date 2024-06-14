@@ -73,6 +73,10 @@
 		"random": "cpp",
 		"numbers": "cpp",
 		"ranges": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"stop_token": "cpp",
+		"thread": "cpp",
+		"cinttypes": "cpp",
+		"semaphore": "cpp"
 	}
 }

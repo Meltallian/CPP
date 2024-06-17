@@ -15,6 +15,10 @@ class Span
 	unsigned int	_limit;
 
 	public:
+	
+	//permet d'augmenter la readability
+	typedef std::vector<int>::iterator it;
+
     Span(unsigned int n);
     ~Span();
     Span(const Span& other);
@@ -24,6 +28,6 @@ class Span
 	int		shortestSpan();
 	int		longestSpan();
 
-	void	addNumbers(std::vector<int>::iterator start, std::vector<int>::iterator end);
+	void	addNumbers(it start, it end);
 };
 

@@ -64,7 +64,7 @@ int	Span::shortestSpan()
 
 }
 
-void	Span::addNumbers(std::vector<int>::iterator start, std::vector<int>::iterator end)
+void	Span::addNumbers(it start, it end)
 {
 	//std::distance(begin, end) calculates the number of elements between two iterators, begin and end.
 	size_t	distance = std::distance(start, end);

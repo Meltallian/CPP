@@ -15,7 +15,7 @@ int easyfind_int(C &container, int value)
     typename C::iterator it;
 	//std::find: This is a standard library function from <algorithm> that searches 
 	//for the first occurrence of value in the range 
-	//[container.begin(), container.end()).
+	//[container.begin(), container.end()].
 	it = std::find(container.begin(), container.end(), value);
     if (it == container.end())
         throw std::exception();
@@ -31,7 +31,7 @@ typename C::iterator easyfind(C &container, int value)
     typename C::iterator it;
 	//std::find: This is a standard library function from <algorithm> that searches 
 	//for the first occurrence of value in the range 
-	//[container.begin(), container.end()).
+	//[container.begin(), container.end()].
 	it = std::find(container.begin(), container.end(), value);
     if (it == container.end())
         throw std::exception();

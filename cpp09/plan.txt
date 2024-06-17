@@ -1,0 +1,14 @@
+ex00 (bitcoin)
+std::multimap: This is useful if you have multiple entries for the same date.
+std::map: If each date has only one associated value (or if you want to keep 
+only the latest value for each date), std::map would be more appropriate because 
+it automatically manages unique keys and provides faster lookup times.
+
+ex01 reverse polish notation
+std::stack: It is specifically designed for stack operations (LIFO - Last In First Out), 
+making it more intuitive and semantically appropriate for RPN calculations.
+
+ex02 PmergeMe
+std::deque: Similar to std::vector, but allows efficient insertions and deletions at both ends.
+std::list: Efficient for frequent insertions and deletions anywhere in the sequence but 
+lacks random access.

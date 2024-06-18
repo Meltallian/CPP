@@ -8,7 +8,7 @@ CXXFLAGS= -Wall -Wextra -Werror -std=c++98 -g -I ./
 LDFLAGS= #-fsanitize=address
 
 # Target executable
-TARGET= bite
+TARGET= btc
 
 # Source files
 SOURCES= main.cpp BitcoinExchange.cpp

@@ -9,15 +9,6 @@
 #include <algorithm>
 #include <exception>
 
-template <typename T>
-struct Iterator 
-{
-    typedef std::forward_iterator_tag iterator_category;
-    typedef std::ptrdiff_t difference_type;
-    typedef T value_type;
-    typedef value_type* pointer;
-    typedef value_type& reference;
-};
 
 //When you create a std::stack without specifying the container type, 
 //it uses std::deque by default

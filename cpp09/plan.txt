@@ -12,3 +12,5 @@ ex02 PmergeMe
 std::deque: Similar to std::vector, but allows efficient insertions and deletions at both ends.
 std::list: Efficient for frequent insertions and deletions anywhere in the sequence but 
 lacks random access.
+
+g++

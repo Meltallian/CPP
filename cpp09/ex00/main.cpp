@@ -44,7 +44,7 @@ bool	is_date_valid(std::string date)
 		std::cout << "Error: no date." << std::endl;
 		return false;
 	}
-	if (!date.find('-'))
+	if (date.find('-') == std::string::npos)
 	{
 		std::cout << "Error: bad input => " << date << std::endl;
 		return false;		

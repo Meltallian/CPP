@@ -1,5 +1,24 @@
 #include "RPN.hpp"
 
+void	calculus(char *c, int *top, int *second, int *result)
+{
+	switch (*c) 
+	{
+		case '*':
+			*result = *second * *top;
+			break;
+		case '/':
+			*result = *second / *top;
+			break;
+		case '+':
+			*result = *second + *top;
+			break;
+		case '-':
+			*result = *second - *top;
+			break;
+	}
+}
+
 int	exec(std::string &line, RPN &stack)
 {
 	for (std::string::iterator it = line.begin(); it != line.end(); it++)
@@ -23,24 +42,8 @@ int	exec(std::string &line, RPN &stack)
 			int second = stack.top();
 			stack.pop();
 			int result;
-		
-			switch (c) 
-			{
-				case '*':
-					result = second * top;
-					break;
-				case '/':
-					result = second / top;
-					break;
-				case '+':
-					result = second + top;
-					break;
-				case '-':
-					result = second - top;
-					break;
-				default:
-					continue;
-			}
+			calculus(&c, &top, &second, &result);
+
 			stack.push(result);
 		}
 		else 

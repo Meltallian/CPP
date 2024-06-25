@@ -80,5 +80,6 @@
 		"semaphore": "cpp",
 		"list": "cpp",
 		"map": "cpp"
-	}
+	},
+	"C_Cpp.default.compilerPath": "/usr/bin/g++"
 }

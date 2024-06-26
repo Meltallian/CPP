@@ -6,10 +6,14 @@
 #include <sys/time.h>
 #include <vector>
 #include <deque>
-#include <list>
 #include <algorithm>
 #include <exception>
 
+
+//std::deque is designed to balance the benefits of both std::vector 
+//and std::list. It achieves this by using a sequence of 
+//contiguous memory blocks, called "chunks" or "segments," 
+//rather than a single contiguous memory block like std::vector.
 class PMEDeque : public std::deque<int>
 {
 	private:
@@ -24,15 +28,15 @@ class PMEDeque : public std::deque<int>
 
 };
 
-class PMEList : public std::list<int>
+class PMEVector : public std::vector<int>
 {
 	private:
 
 	public:
-    PMEList();
-    ~PMEList();
-    PMEList(const PMEList& other);
-    PMEList& operator=(const PMEList& other);
+    PMEVector();
+    ~PMEVector();
+    PMEVector(const PMEVector& other);
+    PMEVector& operator=(const PMEVector& other);
 
-	void merge_sort(PMEDeque &A, int start, int end, int n);
+	void merge_sort(PMEVector &A, int start, int end, int n);
 };

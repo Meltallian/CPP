@@ -23,8 +23,8 @@ int	main(void)
 		ShrubberyCreationForm	s("schrub");
 		p.beSigned(a);
 		p.execute(a);
-		// r.beSigned(a);
-		// r.execute(a);
+		r.beSigned(a);
+		r.execute(a);
 		s.beSigned(a);
 		s.execute(a);
    		std::cout << a << std::endl;

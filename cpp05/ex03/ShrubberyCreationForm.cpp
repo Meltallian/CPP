@@ -28,33 +28,25 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	{
 		if (executor.getGrade() <= getReqGradeToExecute())
 		{
-			std::ofstream	file(_target + "_shrubbery");
-			int height = 5;
-			int width = 2 * height - 1;
-			for (int i = 0; i < height; ++i) {
-				for (int j = 0; j < width; ++j) {
-					if (j >= height - 1 - i && j <= height - 1 + i) {
-						file << '*';
-					} else {
-						file << ' ';
-					}
-				}
-				file << std::endl;
+			std::string target;
+			target = _target + "_shrubbery";
+   			std::ofstream file(target.c_str());
+    		if (file.is_open()) 
+			{
+				file << "       _-_\n"
+				<< "    /~~   ~~\\\n"
+				<< " /~~         ~~\\\n"
+				<< "{               }\n"
+				<< " \\  _-     -_  /\n"
+				<< "   ~  \\\\ //  ~\n"
+				<< "_- -   | | _- _\n"
+				<< "  _ -  | |   -_\n"
+				<< "      // \\\\\n";
+        		file.close();
 			}
-			for (int i = 0; i < 2; ++i) {
-				for (int j = 0; j < width; ++j) {
-					if (j == height - 1) {
-						file << '|';
-					} else {
-						file << ' ';
-					}
-				}
-				file << std::endl;
-			}
-			file.close();
+			else
+				throw AForm::GradeTooLowException();
 		}
-		else
-			throw AForm::GradeTooLowException();
 	}
 	else
 		throw AForm::NotSigned();

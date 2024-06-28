@@ -12,7 +12,7 @@ TARGET= buro
 
 # Source files
 SOURCES= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
-		RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+		RobotomyRequestForm.cpp ShrubberyCreationForm.cpp 
 
 
 # Object files

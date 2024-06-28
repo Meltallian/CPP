@@ -6,9 +6,11 @@
 #include <sstream>
 #include <stdlib.h>
 
-class ScalarConverter {
+class ScalarConverter 
+{
 	private:
 	ScalarConverter();
+	
 	public:
 	static void	convert(const std::string &l);
 

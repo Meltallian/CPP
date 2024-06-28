@@ -13,5 +13,6 @@ int main()
 	std::cout <<  back->i << std::endl;
 	std::cout <<  back->d << std::endl;
 	std::cout <<  back->f << std::endl;
+	delete swag;
 	return 0;
 }

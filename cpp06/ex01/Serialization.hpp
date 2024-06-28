@@ -4,14 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <stdint.h>
-
-
-typedef struct s_data
-{
-	int	i;
-	double d;
-	float f;
-}	Data;
+#include "data.h"
 
 class Serialization 
 {

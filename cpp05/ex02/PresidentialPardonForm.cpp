@@ -24,7 +24,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &oth
 }
 
 
-void	PresidentialPardonForm::execute(Bureaucrat const &executor) const
+void	PresidentialPardonForm::execute(const Bureaucrat &executor) const
 {
 	if (getSigned())
 	{

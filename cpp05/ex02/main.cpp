@@ -1,6 +1,7 @@
 #include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 #include "ShrubberyCreationForm.hpp"
 
 void handleException(const std::exception &ex) 
@@ -19,14 +20,14 @@ int	main(void)
 	{
 	    Bureaucrat a("John", test);
 		PresidentialPardonForm p("Schlag");
-		RobotomyRequestForm	r("Douche");
+		// RobotomyRequestForm	r("Douche");
 		ShrubberyCreationForm	s("schrub");
-		p.beSigned(a);
-		p.execute(a);
-		r.beSigned(a);
-		r.execute(a);
-		s.beSigned(a);
-		s.execute(a);
+		// p.beSigned(a);
+		// p.execute(a);
+		// r.beSigned(a);
+		// r.execute(a);
+		// s.beSigned(a);
+		// s.execute(a);
    		// std::cout << a << std::endl;
 		// std::cout << s << std::endl;
     } 

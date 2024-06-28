@@ -76,12 +76,13 @@ void	Bureaucrat::signForm(AForm &f)
 			<< " because he's just plain stoupid." << std::endl;
 }
 
-void	Bureaucrat::executeForm(AForm const &form)
+void	Bureaucrat::executeForm(const AForm &form)
 {
 	if (form.getSigned())
 	{
 		if (_grade <= form.getReqGradeToExecute())
 		{
+			form.execute(*this);
 			std::cout << _name << " executed " << form.getName() << "." << std::endl;
 		}
 		else

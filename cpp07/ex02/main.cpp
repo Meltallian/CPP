@@ -53,6 +53,7 @@ int main(int, char**)
 
 	// Array<std::string> a(212);
 	// a[2] = "swaggos";
+	// std::cout << a.size() << std::endl;
 	// std::cout << a[2] << std::endl;
 
     return 0;

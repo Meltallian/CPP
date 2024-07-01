@@ -10,6 +10,5 @@ void	iter(T *array, U len, F f)
 	for (U i = 0; i < len; i++)
 	{
 		f(array[i]);
-
 	}
 }

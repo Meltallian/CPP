@@ -26,12 +26,18 @@ int main()
 	++it;
 	--it;
 
+	std::cout << "now printing stack content : " << std::endl;
 	while (it != ite)
 	{
 		std::cout << *it << std::endl;
 		++it;
 	}
 	std::stack<int> s(mstack);
+
+	//other tests:
+	std::cout << "size of stack: " << s.size() << std::endl;
+	std::cout << "is stack empty ? " << s.empty() << std::endl;
+
 	return 0;
 }
 
@@ -61,11 +67,17 @@ int main()
 // 	++it;
 // 	--it;
 
+// 	std::cout << "now printing stack content : " << std::endl;
 // 	while (it != ite)
 // 	{
 // 		std::cout << *it << std::endl;
 // 		++it;
 // 	}
-// 	// std::stack<int> s(mstack);
+// 	std::list<int> s(mstack);
+
+// 	//other tests:
+// 	std::cout << "size of stack: " << s.size() << std::endl;
+// 	std::cout << "is stack empty ? " << s.empty() << std::endl;
+
 // 	return 0;
 // }

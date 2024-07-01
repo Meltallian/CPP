@@ -7,21 +7,6 @@
 #include <algorithm>
 #include <exception>
 
-template <typename C>
-int easyfind_int(C &container, int value) 
-{
-	//typename C::iterator: This declares it as an iterator type for the container C. 
-	//The typename keyword is necessary because C::iterator is a dependent type 
-    typename C::iterator it;
-	//std::find: This is a standard library function from <algorithm> that searches 
-	//for the first occurrence of value in the range 
-	//[container.begin(), container.end()].
-	it = std::find(container.begin(), container.end(), value);
-    if (it == container.end())
-        throw std::exception();
-	else
-        return *it;
-}
 
 template <typename C>
 typename C::iterator easyfind(C &container, int value) 
@@ -46,3 +31,16 @@ typename C::iterator easyfind(C &container, int value)
 	//This situation does not imply that the last element of the container was 
 	//the searched value; instead, it explicitly indicates that the value was 
 	//not found within the range.
+
+
+//this one works returning int directly instead of an iterator.
+template <typename C>
+int easyfind_int(C &container, int value) 
+{
+    typename C::iterator it;
+	it = std::find(container.begin(), container.end(), value);
+    if (it == container.end())
+        throw std::exception();
+	else
+        return *it;
+}

@@ -63,7 +63,7 @@ int main(int ac, char **av)
 		PMEDeque A;
 		PMEVector V;
 
-		int threshold = 25;
+		int threshold = 20;
 		struct timeval start, end;
 		gettimeofday(&start, NULL);
 		for (int i = 1; i < ac; i++)

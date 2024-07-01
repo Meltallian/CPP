@@ -79,7 +79,8 @@
 		"cinttypes": "cpp",
 		"semaphore": "cpp",
 		"list": "cpp",
-		"map": "cpp"
+		"map": "cpp",
+		"*.tpp": "c"
 	},
 	"C_Cpp.default.compilerPath": "/usr/bin/g++"
 }

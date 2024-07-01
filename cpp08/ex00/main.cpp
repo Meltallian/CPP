@@ -3,16 +3,16 @@
 int main()
 {
 	std::vector<int> a; 
-	int arr[] = {2, 1, 2};
+	int arr[] = {5, 1, 8};
 	a.assign(arr, arr + sizeof(arr) / sizeof(int));
-	int b = 2;
+	int b = 8;
 	try {
 		std::cout << *easyfind(a, b) << std::endl;
 		// std::cout << easyfind_int(a, b) << std::endl;
 	}
 	catch (const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
     return 0;
 }

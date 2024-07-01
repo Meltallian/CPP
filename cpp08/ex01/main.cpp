@@ -32,14 +32,7 @@ int main()
 		int arro[] = {22, 110, 33, 16, 32};
 		b.assign(arro, arro + sizeof(arro) / sizeof(int));
 
-
 		Span span(100010);
-
-		// for (int i = 0; i < 100000; i++)
-		// {
-		// 	span.addNumber(i * 3);
-			
-		// }
 
 		span.addNumbers(a.begin(), a.end());
 		span.addNumbers(b.begin(), b.end());

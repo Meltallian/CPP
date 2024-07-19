@@ -5,6 +5,8 @@
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
+
+	const Array<int> & arr = numbers;
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
@@ -12,6 +14,7 @@ int main(int, char**)
         const int value = rand();
         numbers[i] = value;
         mirror[i] = value;
+		arr[i] = value;
     }
     //SCOPE
     {

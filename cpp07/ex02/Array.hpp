@@ -52,6 +52,12 @@ class Array
 			throw OutOfBounds();
 		return _elements[index];
 	}
+	const T &operator[](int index) const
+	{
+		if (index < 0 || index >= static_cast<int>(_size))
+			throw OutOfBounds();
+		return _elements[index];
+	}
 
 	class OutOfBounds : public std::exception
 	{

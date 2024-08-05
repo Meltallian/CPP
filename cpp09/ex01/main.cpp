@@ -36,6 +36,11 @@ int	exec(std::string &line, RPN &stack)
 			//this was added to avoid segfaulting if input was incorrect : too many operations for too few digits
 			if (stack.size() < 2) 
                 return 0;
+			if (c == '/' && stack.top() == 0)
+			{
+				// std::cout << "Error : Division by 0 forbidden." << std::endl;
+				return 0;
+			}
 
 			int top = stack.top();
 			stack.pop();

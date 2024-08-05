@@ -50,9 +50,9 @@ bool	is_date_valid(std::string date)
 		return false;		
 	}
 	std::istringstream iss(date);
-	double	year;
-	double	month;
-	double	day;
+	int	year;
+	int	month;
+	int	day;
     char delimiter;
 
     iss >> year;
@@ -60,12 +60,6 @@ bool	is_date_valid(std::string date)
     iss >> month;
     iss >> delimiter; // Read and discard the hyphen
     iss >> day;
-
-	if (year < 0)
-	{
-		std::cout << "Error: bad year input => " << date << std::endl;
-		return false;			
-	}
 
 	if (month < 1 || month > 12)
 	{
@@ -78,7 +72,19 @@ bool	is_date_valid(std::string date)
 		std::cout << "Error: bad day input => " << date << std::endl;
 		return false;			
 	}
-	
+
+	if (year % 4 != 0 && month == 2 && day > 28)
+	{
+		std::cout << "Error: bad february day input => " << date << std::endl;
+		return false;			
+	}
+
+	if (month % 2 == 0 && day > 30)
+	{
+		std::cout << "Error: bad day input => " << date << std::endl;
+		return false;			
+	}	
+
 	return true;
 }
 

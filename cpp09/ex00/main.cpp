@@ -61,16 +61,24 @@ bool	is_date_valid(std::string date)
     iss >> delimiter; // Read and discard the hyphen
     iss >> day;
 
+	if (year < 0)
+	{
+		std::cout << "Error: bad year input => " << date << std::endl;
+		return false;			
+	}
+
 	if (month < 1 || month > 12)
 	{
 		std::cout << "Error: bad month input => " << date << std::endl;
 		return false;			
 	}
-	if (day < 1 || month > 31)
+
+	if (day < 1 || day > 31)
 	{
 		std::cout << "Error: bad day input => " << date << std::endl;
 		return false;			
 	}
+	
 	return true;
 }
 
